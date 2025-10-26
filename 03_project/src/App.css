@@ -1,0 +1,153 @@
+/* ----------------------------------------------------------
+   LIGHT MODE MODERN COUNTER APP (MOBILE-FIRST)
+   Clean, glassy, and smooth feel — like a native app
+---------------------------------------------------------- */
+
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary: #4f46e5;
+  --primary-light: #818cf8;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --radius: 18px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --transition: 0.25s ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* App container */
+.counter-app {
+  width: 90%;
+  max-width: 380px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transition: all var(--transition);
+}
+
+/* App title */
+.title {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Display box */
+.display {
+  width: 100%;
+  background: linear-gradient(145deg, #fafafa, #f1f3f8);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.pop {
+  transform: scale(1.15);
+  color: var(--primary-light);
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Button styles */
+.btn {
+  flex: 1;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0.7rem 0.5rem;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.15);
+}
+
+.btn.increase {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.decrease {
+  background: #e5e7eb;
+  color: var(--text-dark);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:hover {
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+/* Shake animation if user tries below zero */
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-6px);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+}
+
+.counter-app.shake {
+  background-color: #ff070719;
+  animation: shake 0.4s;
+}
+
+/* Responsive tweaks */
+@media (min-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .number {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    font-size: 2rem;
+  }
+}

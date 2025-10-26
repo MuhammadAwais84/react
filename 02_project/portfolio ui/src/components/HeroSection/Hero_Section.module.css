@@ -1,0 +1,45 @@
+
+    .Hero_Section {
+      height: 92.9vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .Hero_Section_BG {
+      height: 100%;
+      width: 100%;
+      background: url("https://img.pikbest.com/58pic/12/65/27/3058PIC58PIC4CITW58PIC4e1Hejy_PIC2018.jpg!w700wp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .Blur_Overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(4px);
+      background: rgba(255, 255, 255, 0.1);
+      z-index: 2;
+    }
+
+    .Content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      color: white;
+      text-align: center;
+    }

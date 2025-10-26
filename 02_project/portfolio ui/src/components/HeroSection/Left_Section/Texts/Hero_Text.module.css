@@ -1,0 +1,30 @@
+.Hero_Text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.Hero_Text h1 {
+
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ebeaea;
+}
+
+.Hero_Text h1 span {
+    color: #0070f3;
+}
+
+.Hero_Text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e7e7e7;
+}
+
+.Hero_Text p {
+
+    font-size: 1.2rem;
+    color: #d4eaff;
+    line-height: 1.5;
+}

@@ -1,0 +1,11 @@
+.Left_Section{
+    height: 60%;
+    width: 50%;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: justify;
+}

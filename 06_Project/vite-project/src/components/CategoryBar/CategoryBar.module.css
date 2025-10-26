@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 80px;
+  z-index: 40;
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.chip {
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text-color, #0d141b);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.active {
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌙 Dark Mode */
+body.dark .chip {
+  background: rgba(50, 50, 50, 0.6);
+  color: #e2e8f0;
+}
+
+body.dark .chip:hover {
+  background: rgba(80, 80, 80, 0.8);
+}
+
+body.dark .active {
+  color: white !important;
+  font-weight: 600;
+}

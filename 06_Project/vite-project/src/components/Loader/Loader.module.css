@@ -1,0 +1,45 @@
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  width: 100%;
+  color: var(--text-color, #0d141b);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3b82f6; /* blue accent */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* 🌙 Dark mode adjustments */
+body.dark .spinner {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: #60a5fa;
+}
+
+body.dark .text {
+  color: #e2e8f0;
+}
+
+/* Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

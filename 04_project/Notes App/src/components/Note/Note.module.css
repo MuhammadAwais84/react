@@ -1,0 +1,41 @@
+.note {
+  background-color: #1e293b; /* card background */
+  color: #ccd3dc; /* text color */
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.note p {
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+.note p span{
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.note .delete_btn {
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.note .delete-btn:hover {
+  background-color: #dc2626;
+}

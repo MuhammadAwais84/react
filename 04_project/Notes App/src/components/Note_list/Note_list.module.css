@@ -1,0 +1,19 @@
+.noteList {
+  padding: 20px;
+  background-color: #0f172a; /* dark blue-gray */
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  grid-column: 1 / -1; /* make title span full width */
+}
+
+.empty {
+  color: #94a3b8;
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}
+ 

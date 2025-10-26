@@ -1,0 +1,42 @@
+/* 🌍 Base container */
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌞 Light mode variables */
+body.light {
+  --bg: #f9fafb;
+  --text: #0d141b;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+/* 🌙 Dark mode variables */
+body.dark {
+  --bg: #0d141b;
+  --text: #ffffff;
+  --card-bg: #1a1f25;
+  --border: #2a2f36;
+}
+
+/* ✨ Smooth global transitions */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hide scrollbar (for clean gallery look) */
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

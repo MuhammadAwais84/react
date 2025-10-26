@@ -1,0 +1,73 @@
+.imageCard {
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid; /* 👈 ensures image doesn’t break between columns */
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.imageCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.image {
+  width: 100%;
+  height: auto; /* 👈 key line! adjusts height dynamically */
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+  /* Painting hints to reduce flicker/repaints */
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.imageCard:hover .image {
+  transform: scale(1.05);
+}
+
+/* ❤️ Favorite + 📥 Download buttons */
+.favBtn,
+.downloadBtn {
+  position: absolute;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5; /* ensure buttons sit above transformed image */
+  pointer-events: auto;
+}
+
+.favBtn {
+  right: 40px;
+}
+
+.downloadBtn {
+  right: 10px;
+}
+
+.imageCard:hover .favBtn,
+.imageCard:hover .downloadBtn {
+  opacity: 1;
+}
+
+/* visible state for liked */
+.liked {
+  background: rgba(220, 38, 38, 0.9);
+}
+
+/* make sure image isn't above the buttons */
+.image {
+  z-index: 1;
+}
